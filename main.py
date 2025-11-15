@@ -6,7 +6,7 @@ def main():
     num_words = get_num_words(data)
     print(f"Found {num_words} total words")
     word_dict = get_word_dictionary(data)
-    print(word_dict)
+    print(get_sorted_list(word_dict))
 
     
 main()
