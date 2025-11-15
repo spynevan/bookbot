@@ -25,3 +25,22 @@ def get_sorted_list(letter_dictionary):
     return_object.sort(key=lambda item: item["num"], reverse=True)
     return return_object
 
+def print_report(file_path):
+    book_text = get_book_text(file_path)
+    num_words = get_num_words(book_text)
+    word_dictionary = get_word_dictionary(book_text)
+    sorted_list = get_sorted_list(word_dictionary)
+
+
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {file_path}...")
+    print("----------- Word Count ----------")
+    print(f"Found {num_words} total words")
+    print("--------- Character Count -------")
+    for dictionary in sorted_list:
+        print(f"{dictionary['char']}: {dictionary['num']}")
+    print("============= END ===============")
+
+
+
+
